@@ -59,21 +59,7 @@ return (
 <BrowserRouter>
 <div className="App">
 <Header />
-{/* <Routes>
-<Route path="/" element={<HomePage courses={coursesData} />} />
-<Route path="/about" element={<AboutPage />} />
-<Route path="/courses" element={<CoursesPage courses={coursesData} />} />
-<Route path="/contact" element={<ContactPage />} />
-<Route path="*" element={<NotFoundPage />} />
-</Routes>
-<Routes>
-<Route path="/" element={<HomePage courses={coursesData} />} />
-<Route path="/about" element={<AboutPage />} />
-<Route path="/courses" element={<CoursesPage courses={coursesData} />} />
-<Route path="/courses/:id" element={<CourseDetailPage courses={coursesData} />} />
-<Route path="/contact" element={<ContactPage />} />
-<Route path="*" element={<NotFoundPage />} />
-</Routes> */}
+
 
 //Dans le composant Routes
 <Routes>
@@ -99,45 +85,3 @@ return (
 );
 }
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import MemberLayout from './pages/MemberArea/MemberLayout';
-import Dashboard from './pages/MemberArea/Dashboard';
-import Profile from './pages/MemberArea/Profile';
-import MyCourses from './pages/MemberArea/MyCourses';
-import Settings from './pages/MemberArea/Settings';
-import './pages/MemberArea/MemberArea.css';
-
-
-// Dans le composant Routes
-<Routes>
-<Route path="/" element={<HomePage courses={coursesData} />} />
-<Route path="/about" element={<AboutPage />} />
-<Route path="/courses" element={<CoursesPage courses={coursesData} />} />
-<Route path="/courses/:id" element={<CourseDetailPage courses={coursesData} />} />
-<Route path="/contact" element={<ContactPage />} />
-{/* Routes imbriquées pour l'espace membre */}
-<Route path="/member" element={<MemberLayout />}>
-<Route index element={<Dashboard />} />
-<Route path="profile" element={<Profile />} />
-<Route path="courses" element={<MyCourses />} />
-<Route path="settings" element={<Settings />} />
-</Route>
-<Route path="*" element={<NotFoundPage />} />
-</Routes>
